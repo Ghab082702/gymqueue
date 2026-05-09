@@ -40,4 +40,9 @@ public class BookingController {
     public void deleteBooking(@PathVariable Long id) {
         bookingService.deleteBooking(id);
     }
+
+    @PutMapping("/{id}/complete")
+    public Booking completeBooking(@PathVariable Long id){
+        return bookingService.completeBooking(id);
+    }
 }
